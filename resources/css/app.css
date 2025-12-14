@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: 'Nunito Sans', sans-serif;
+    }
+
+    h1, h2, h3, .font-title {
+        font-family: 'Montserrat', sans-serif !important;
+    }
+}
+
+/* ============================= */
+/*  SELECT UI - TailWIND CUSTOM */
+/* ============================= */
+
+.select-ui {
+    @apply w-full border border-gray-300 rounded-xl py-3 px-4 
+           bg-white text-gray-800
+           focus:outline-none focus:ring-0 focus:border-primary
+           appearance-none;
+}
+
+/* Opción seleccionada verde claro */
+select.select-ui option:checked {
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
+}
+
+/* Hover en opciones */
+select.select-ui option:hover {
+    background-color: #a7f3d0 !important;
+    color: #065f46 !important;
+}
+
+select.select-ui:focus option:checked {
+    background-color: #d1fae5 !important;
+}
